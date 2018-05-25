@@ -30,14 +30,10 @@ const User = mongoose.model('User', userSchema);
 
 // checkout: save user information
 const saveInfo = (username, data) => new Promise((resolve, reject) => {
-  // const newUser = new User(data);
-  // let username = data.name;
-
   User.findOneAndUpdate({ name: username }, data, { upsert: true }).exec((err, response) => {
     if (err) {
       reject(err);
     } else {
-      console.log(response);
       resolve(response);
     }
   });
@@ -55,10 +51,7 @@ const getUserInfo = username => new Promise((resolve, reject) => {
 });
 
 
-// saveInfo({ name: 'mo', email: '2000prcs@gmail.com', password: 'test' });
-
 module.exports = {
-  db,
   saveInfo,
   getUserInfo,
 };

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import Form3 from './Form3.jsx';
 
 export default class Form2 extends Component {
   constructor(props) {
@@ -20,8 +19,7 @@ export default class Form2 extends Component {
 
   componentWillMount() {
     this.setState({ name: this.props.location.state.name });
-  } 
-
+  }
 
 
   handleChange(e, type) {
@@ -71,37 +69,37 @@ export default class Form2 extends Component {
     return (
       <div>
         { this.state.showForm === true ?
+          <div>
             <div>
               <div>
-                <div>
-                  <span>Address Info</span>
-                </div>
-                <div>
-                  <label htmlFor="line1">Line1: </label>
-                  <input type="text" id="line1" onChange={(e) => this.handleChange(e, 'line1')} placeholder="Address line 1" />
-                </div>
-                <div>
-                  <label htmlFor="line2">Line2: </label>
-                  <input type="text" id="line2" onChange={(e) => this.handleChange(e, 'line2')} placeholder="Address line 2" />
-                </div>
-                <div>
-                  <label htmlFor="city">City: </label>
-                  <input type="text" id="city" onChange={(e) => this.handleChange(e, 'city')} placeholder="Enter city" />
-                </div>
-                <div>
-                  <label htmlFor="state">State: </label>
-                  <input type="text" id="state" onChange={(e) => this.handleChange(e, 'state')} placeholder="Enter state" />
-                </div>
-                <div>
-                  <label htmlFor="zip">Zip Code: </label>
-                  <input type="text" id="zip" onChange={(e) => this.handleChange(e, 'zip')} placeholder="Enter zip code" />
-                </div>
-                <div>
-                  <label htmlFor="phone">Phone Number: </label>
-                  <input type="text" id="phone" onChange={(e) => this.handleChange(e, 'phone')} placeholder="Enter phone number" />
-                </div>
+                <span>Address Info</span>
               </div>
-                <button onClick={() => this.handleClick()}>Next</button>
+              <div>
+                <label htmlFor="line1">Line1: </label>
+                <input type="text" id="line1" onChange={e => this.handleChange(e, 'line1')} placeholder="Address line 1" />
+              </div>
+              <div>
+                <label htmlFor="line2">Line2: </label>
+                <input type="text" id="line2" onChange={e => this.handleChange(e, 'line2')} placeholder="Address line 2" />
+              </div>
+              <div>
+                <label htmlFor="city">City: </label>
+                <input type="text" id="city" onChange={e => this.handleChange(e, 'city')} placeholder="Enter city" />
+              </div>
+              <div>
+                <label htmlFor="state">State: </label>
+                <input type="text" id="state" onChange={e => this.handleChange(e, 'state')} placeholder="Enter state" />
+              </div>
+              <div>
+                <label htmlFor="zip">Zip Code: </label>
+                <input type="text" id="zip" onChange={e => this.handleChange(e, 'zip')} placeholder="Enter zip code" />
+              </div>
+              <div>
+                <label htmlFor="phone">Phone Number: </label>
+                <input type="text" id="phone" onChange={e => this.handleChange(e, 'phone')} placeholder="Enter phone number" />
+              </div>
+            </div>
+            <button onClick={() => this.handleClick()}>Next</button>
             </div>
           : null
           }

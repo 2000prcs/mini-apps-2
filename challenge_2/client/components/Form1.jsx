@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import Form2 from './Form2.jsx';
 import axios from 'axios';
 
 export default class Form1 extends Component {
   constructor(props) {
     super(props);
-    this.state = {   
+    this.state = {
       name: '',
       email: '',
       password: '',
@@ -45,30 +43,29 @@ export default class Form1 extends Component {
 
 
   render() {
-
     return (
       <div>
         { this.state.showForm === true ?
+          <div>
             <div>
               <div>
-                <div>
-                  <span>Basic Info</span>
-                </div>
-                <div>
-                  <label htmlFor="name">Name: </label>
-                  <input type="text" id="name" onChange={(e) => this.handleChange(e, 'name')} placeholder="Enter your name" />
-                </div>
-                <div>
-                  <label htmlFor="email">Email: </label>
-                  <input type="text" id="email" onChange={(e) => this.handleChange(e, 'email')} placeholder="Enter your email" />
-                </div>
-                <div>
-                  <label htmlFor="password">Password: </label>
-                  <input type="text" id="password" onChange={(e) => this.handleChange(e, 'password')} placeholder="Enter your password" />
-                </div>
+                <span>Basic Info</span>
               </div>
-                <button onClick={() => this.handleClick()}>Next</button>
+              <div>
+                <label htmlFor="name">Name: </label>
+                <input type="text" id="name" onChange={e => this.handleChange(e, 'name')} placeholder="Enter your name" />
+              </div>
+              <div>
+                <label htmlFor="email">Email: </label>
+                <input type="text" id="email" onChange={e => this.handleChange(e, 'email')} placeholder="Enter your email" />
+              </div>
+              <div>
+                <label htmlFor="password">Password: </label>
+                <input type="text" id="password" onChange={e => this.handleChange(e, 'password')} placeholder="Enter your password" />
+              </div>
             </div>
+            <button onClick={() => this.handleClick()}>Next</button>
+          </div>
           : null
           }
       </div>
