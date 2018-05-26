@@ -26,3 +26,9 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+table {
+  margin: auto;
+  width: 50%;
+  margin-top: 20px;
+} 
