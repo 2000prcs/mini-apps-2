@@ -62,7 +62,7 @@ export default class App extends Component {
 
   render(){
       return(
-        <div>
+        <div id="react-paginate">
           <div style={{ margin: 20 }}>
             <h1>Mo's Historical Event Finder</h1>
           </div>

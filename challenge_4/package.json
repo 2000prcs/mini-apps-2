@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack -d -w"
+    "build": "webpack -d -w",
+    "style": "sass client/styles/styles.scss public/style.css"
   },
   "author": "Moyeong Lee",
   "license": "ISC",
